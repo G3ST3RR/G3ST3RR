@@ -1,2 +1,0 @@
-# G3ST3RR TEST SITE
-Test site

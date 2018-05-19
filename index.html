@@ -21,12 +21,20 @@
 </head>
 <body style="background-color: #A60400;">
 <center>
-  <p1>G3ST3RR<br></p1>
-  <img src="images/ava.png"><br>
-  <h1></h1>
-<canvas id="canvas" width="1000" height="325" style="display: block;"></canvas>
+  <button id="button" class="button"><img src="images/speaker.png"
+          style="vertical-align: middle"><br>Music</button><br>
+<p1>G3ST3RR<br></p1>
+<img class="borov" src="images/ava.png"><br>
 </center>
+<canvas id="canvas" class="vizualizer" width="1000" height="325" style="display: block;"></canvas>
 <script type="text/javascript">
+
+  var btn = document.querySelector('button');
+
+  btn.addEventListener('click', MusicOn);
+
+  function MusicOn() {
+    btn.disabled = true;
     if (! window.AudioContext) {
         if (! window.webkitAudioContext) {
             alert('no audiocontext found');
@@ -103,9 +111,8 @@
             var value = array[i];
             ctx.fillRect(i*5,325-value,3,325);
         }
-    };
-
+    }
+  }
 </script>
-
 </body>
 </html>
